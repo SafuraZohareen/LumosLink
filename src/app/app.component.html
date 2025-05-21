@@ -1,0 +1,6 @@
+<app-header ngSkipHydration (toggleSidebar)="sidebarOpen = !sidebarOpen"></app-header>
+<app-sidebar [isOpen]="sidebarOpen"></app-sidebar>
+
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

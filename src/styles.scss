@@ -1,0 +1,50 @@
+/* styles.scss */
+
+body, html {
+  font-family: 'Viner Hand ITC', cursive, serif;
+  background-color: #1b1b1b; /* Dark, moody background */
+  color: #f5f1dc;            /* Warm parchment-like text color */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Viner Hand ITC', cursive, serif;
+  font-weight: normal;
+  color: #d4af37; /* Golden, like Hogwarts house points or trophies */
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #7f5f00; /* Dark gold/brown */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+button {
+  font-family: 'Viner Hand ITC', cursive, serif;
+  background-color: #3a3a3a;
+  border: 1px solid #d4af37;
+  color: #f5f1dc;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4af37;
+  color: #1b1b1b;
+}
+
+/* Add some letter spacing and subtle shadows for headings */
+
+h1, h2 {
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px #000;
+}

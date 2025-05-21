@@ -1,0 +1,95 @@
+/* Sidebar styles */
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #1e1b2f; // Midnight Blue
+  color: #e0e0e0;      // Silver White
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-nav > li {
+  margin-bottom: 1rem;
+}
+
+.sidebar-nav > li > a {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-nav > li > a .icon {
+  margin-right: 0.9rem;
+  color: #b08d57; // Hogwarts bronze
+  font-size: 1.5rem;
+}
+
+.sidebar-nav > li > a:hover,
+.sidebar-nav > li > a.active {
+  background-color: #d4af37; // Gold highlight
+  color: #1e1b2f;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 1.8rem;
+  margin-top: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.submenu.open {
+  max-height: 500px;
+}
+
+.submenu li {
+  margin-bottom: 0.6rem;
+}
+
+.submenu li a {
+  color: #c5c5c5;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  display: block;
+  border-radius: 6px;
+  background: #2e3a59; // Submenu background
+  transition: background-color 0.3s ease;
+}
+
+.submenu li a:hover,
+.submenu li a.active {
+  background-color: #d4af37;
+  color: #1e1b2f;
+  font-weight: 600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
