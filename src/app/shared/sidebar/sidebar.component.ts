@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  activeMenu: string | null = 'dashboard';
+  activeMenu: string | null = 'house-points';
   @Input() isOpen = false;
   toggleMenu(menu: string) {
     if (this.activeMenu === menu) {

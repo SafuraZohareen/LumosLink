@@ -1,14 +1,14 @@
 <div class="sidebar">
   <ul class="sidebar-nav">
     <li>
-      <a (click)="toggleMenu('dashboard')" [class.active]="activeMenu === 'dashboard'">
+      <a (click)="toggleMenu('dashboard')" [class.active]="activeMenu === 'house-points'">
         <img src="assets/icons/dashboard.png" class="icon" /> Dashboard
       </a>
-      <ul class="submenu" [class.open]="activeMenu === 'dashboard'">
-        <li><a routerLink="/dashboard/house-points" routerLinkActive="active">House Points</a></li>
-        <li><a routerLink="/dashboard/quidditch" routerLinkActive="active">Quidditch</a></li>
-        <li><a routerLink="/dashboard/detention" routerLinkActive="active">Detention</a></li>
-        <li><a routerLink="/dashboard/news" routerLinkActive="active">News Portal</a></li>
+      <ul class="submenu" [class.open]="activeMenu === 'house-points'">
+        <li><a routerLink="/house-points" routerLinkActive="active">House Points</a></li>
+        <li><a routerLink="/quidditch" routerLinkActive="active">Quidditch</a></li>
+        <li><a routerLink="/detention" routerLinkActive="active">Detention</a></li>
+        <li><a routerLink="/news" routerLinkActive="active">News Portal</a></li>
       </ul>
     </li>
 
@@ -19,26 +19,6 @@
       <ul class="submenu" [class.open]="activeMenu === 'store'">
         <li><a routerLink="/store/diagon-alley" routerLinkActive="active">Diagon Alley</a></li>
         <li><a routerLink="/store/hogsmeade" routerLinkActive="active">Hogsmeade</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a (click)="toggleMenu('chat')" [class.active]="activeMenu === 'chat'">
-        <img src="assets/icons/chat.jpg" class="icon" /> Chat
-      </a>
-      <ul class="submenu" [class.open]="activeMenu === 'chat'">
-        <li><a routerLink="/chat/rooms" routerLinkActive="active">Chat Rooms</a></li>
-        <li><a routerLink="/chat/contacts" routerLinkActive="active">Contacts</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a (click)="toggleMenu('bank')" [class.active]="activeMenu === 'bank'">
-        <img src="assets\icons\bank.jpg" class="icon" /> Bank
-      </a>
-      <ul class="submenu" [class.open]="activeMenu === 'bank'">
-        <li><a routerLink="/bank/accounts" routerLinkActive="active">Accounts</a></li>
-        <li><a routerLink="/bank/transactions" routerLinkActive="active">Transactions</a></li>
       </ul>
     </li>
   </ul>

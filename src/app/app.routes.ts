@@ -1,24 +1,34 @@
-import { Routes } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
-//  const routes: Routes = [];
+import { Routes } from '@angular/router';
+
 export const routes: Routes = [
-    {
-        path: 'dashboard', loadChildren: () => import('./features/dashboard/dashboard.module')
-            .then(m => m.DashboardModule),
-            providers: [provideHttpClient()]
-    },
-    {
-        path: 'chat', loadChildren: () => import('./features/chat/chat.module')
-            .then(m => m.ChatModule)
-    },
-    {
-        path: 'store', loadChildren: () => import('./features/store/store.module')
-            .then(m => m.StoreModule)
-    },
-    {
-        path: 'bank', loadChildren: () => import('./features/bank/bank.module')
-            .then(m => m.BankModule)
-    },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: '**', redirectTo: '/dashboard' }
+  {
+    path: 'house-points',
+    loadComponent: () =>
+      import('./features/house-points-tracker/house-points-tracker.component')
+        .then(m => m.HousePointsComponent), providers: [provideHttpClient()]
+  },
+  {
+    path: 'detention',
+    loadComponent: () =>
+      import('./features/detention/detention.component').then(m => m.DetentionComponent),
+    providers: [provideHttpClient()]
+  },
+  {
+    path: 'detention',
+    loadComponent: () =>
+      import('./features/news-portal/news-portal.component').then(m => m.NewsPortalComponent),
+    providers: [provideHttpClient()]
+  },
+  {
+    path: 'detention',
+    loadComponent: () =>
+      import('./features/quidditch-section/quidditch-section.component').then(m => m.QuidditchSectionComponent),
+    providers: [provideHttpClient()]
+  },
+  {
+    path: '',
+    redirectTo: 'house-points',
+    pathMatch: 'full'
+  }
 ];
